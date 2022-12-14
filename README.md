@@ -1,3 +1,16 @@
+## lala
+
+https://www.youtube.com/watch?v=cDwa_JwuC-w
+
+- npx create-react-app gallery
+- cd gallery
+- code .
+- npm install @material-ui/icons
+- npm install @material-ui/core
+- npm start
+- npm install @mui/icons-material
+- result is slightly different, top model behaviour
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
