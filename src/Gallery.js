@@ -1,5 +1,6 @@
 import { getSpaceUntilMaxLength } from '@testing-library/user-event/dist/utils';
 import React,{useState} from 'react';
+
 import './gallery.css';
 
 import CloseIcon from '@mui/icons-material/Close';
@@ -9,6 +10,9 @@ import img02 from './img/img_02.png';
 import img03 from './img/img_03.png';
 import img04 from './img/img_04.png';
 import img05 from './img/img_05.png';
+
+
+import JsonData from './data.json'
 
 const Gallery = () => {
 
@@ -35,6 +39,17 @@ const Gallery = () => {
         },
        
     ]
+    const DisplayData=JsonData.map(
+        (info)=>{
+            return(
+                <tr>
+                    <td>{info.id}</td>
+                    <td>{info.name}</td>
+                    <td>{info.city}</td>
+                </tr>
+            )
+        }
+    )
     const [model, setModel] = useState(false);
     const [tempImgSrc, setTempImgSrc] = useState('');
     const getImg = (imgSrc) => {
@@ -57,6 +72,18 @@ const Gallery = () => {
                 )
             })}
         </div>
+        <div className='gallery'>
+            {JsonData.map((each,index)=> {
+                console.log(each.src);
+                return (
+                    <div className ="pics" key={index} onClick={()=>getImg(each.src)}>
+                        <img src={each.src} style={{width:'100%'}} /> 
+                    </div>
+                )
+            })}
+        </div>
+
+        
         </>
     )
 
