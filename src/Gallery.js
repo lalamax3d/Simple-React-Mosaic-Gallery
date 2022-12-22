@@ -12,7 +12,7 @@ import img04 from './img/img_04.png';
 import img05 from './img/img_05.png';
 
 
-import JsonData from './data.json'
+import JsonData from './images.json'
 
 const Gallery = () => {
 

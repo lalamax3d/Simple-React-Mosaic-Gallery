@@ -10,7 +10,7 @@
 
 # production
 /build
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';import { LazyLoadImage } from 'react-lazy-load-image-component';
 # misc
 .DS_Store
 .env.local
