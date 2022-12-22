@@ -11,30 +11,38 @@ import img03 from './img/img_03.png';
 import img04 from './img/img_04.png';
 import img05 from './img/img_05.png';
 
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component';
 
 import JsonData from './images.json'
-
-const Gallery = () => {
+const Gallery = ({scrollPosition}) => {
 
     let data = [
         {
             id:1,
+            alt:'img01',
             imgSrc:img01,
         },
         {
             id:2,
+            alt:'img02',
             imgSrc:img02,
         },
         {
             id:3,
+            alt:'img03',
             imgSrc:img03,
         },
         {
             id:4,
+            alt:'img04',
             imgSrc:img04,
         },
         {
             id:5,
+            alt:'img05',
             imgSrc:img05,
         },
        
@@ -60,14 +68,14 @@ const Gallery = () => {
     return (
         <>
         <div className={model? "model open" : "model"}>
-            <img src={tempImgSrc} />
+            <img src={tempImgSrc} alt={tempImgSrc} />
             <CloseIcon onClick={()=>setModel(false)}/>
         </div>
         <div className='gallery'>
             {data.map((item,index)=> {
                 return (
                     <div className ="pics" key={index} onClick={()=>getImg(item.imgSrc)}>
-                        <img src={item.imgSrc} style={{width:'100%'}} /> 
+                        <img src={item.imgSrc} alt={item.alt} style={{width:'100%'}} /> 
                     </div>
                 )
             })}
@@ -77,7 +85,17 @@ const Gallery = () => {
                 console.log(each.src);
                 return (
                     <div className ="pics" key={index} onClick={()=>getImg(each.src)}>
-                        <img src={each.src} style={{width:'100%'}} /> 
+                        {/* <img src={each.src} style={{width:'100%'}} />  */}
+                        <LazyLoadImage
+                            // alt={image.alt}
+                            // height={image.height}
+                            effect="blur"
+                            alt={each.alt}
+                            src={each.src} // use normal <img> attributes as props
+                            height={each.height}
+                            scrollPosition={scrollPosition}
+                            width={each.width}
+                            style={{width:'100%'}} />
                     </div>
                 )
             })}
@@ -89,4 +107,5 @@ const Gallery = () => {
 
 }
 
-export default Gallery
+// export default Gallery
+export default trackWindowScroll(Gallery);

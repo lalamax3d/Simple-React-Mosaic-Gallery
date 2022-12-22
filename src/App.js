@@ -2,6 +2,7 @@
 import React from 'react';
 import './App.css';
 import Gallery from './Gallery';
+// import trackWindowScroll from './Gallery';
 import JsonDataDisplay from './GeekTable';
 
 
