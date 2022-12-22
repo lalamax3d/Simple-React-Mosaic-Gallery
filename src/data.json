@@ -1,0 +1,37 @@
+[
+
+    {
+        "id":1,
+        "name":"Akshit",
+        "city":"Moradabad",
+        "src":"./img/img_01.png"
+    },
+    
+    {
+        "id":2,
+        "name":"Nikita",
+        "city":"Lucknow",
+        "src":"./img/img_02.png"
+    },
+    
+    {
+        "id":3,
+        "name":"Deeksha",
+        "city":"Noida",
+        "src":"./img/img_03.png"
+    },
+    
+    {
+        "id":4,
+        "name":"Ritesh",
+        "city":"Delhi",
+        "src":"./img/img_04.png"
+    },
+    
+    {
+        "id":5,
+        "name":"Somya",
+        "city":"Gurugram",
+        "src":"./img/img_05.png"
+    }
+]
