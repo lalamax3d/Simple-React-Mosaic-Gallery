@@ -1,19 +1,27 @@
 
 .gallery {
-    -webkit-colume-count:5;
-    -moz-colume-count:5;
-    column-count:5;
-    -webkit-column-width:20%;
-    -moz-column-width: 20%;
-    -column-width:20%;
+    -webkit-colume-count:var(--numColumns, 5);
+    -moz-colume-count:var(--numColumns, 5);
+    column-count:var(--numColumns, 5);
+    -webkit-column-width:var(--colPercent, 20%);
+    -moz-column-width: var(--colPercent, 20%);
+    -column-width:var(--colPercent, 20%);
     padding:0 12px;
 
 }
+.sliderDiv {
+    width:30%;
+  }
+  .sliderDiv h2{
+    color: var(--logo-color, rgb(15, 204, 204));
+  }
 .gallery .pics {
     -webkit-transition: all 350ms ease;
     transition: all 350ms ease;
     cursor: pointer;
-    margin-bottom: 12px;
+    margin-bottom: 2px;
+    margin-right: -4px;
+    margin-left: -4px;
 }
 .gallery .pics:hover{
     filter:opacity(0.8);

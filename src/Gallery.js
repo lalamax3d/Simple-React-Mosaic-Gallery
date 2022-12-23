@@ -1,5 +1,6 @@
 import { getSpaceUntilMaxLength } from '@testing-library/user-event/dist/utils';
 import React,{useState} from 'react';
+import {useEffect} from "react";
 
 import './gallery.css';
 
@@ -16,37 +17,31 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component';
 
+import Slider from '@mui/material/Slider';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+
 import JsonData from './images.json'
 const Gallery = ({scrollPosition}) => {
-
-    let data = [
-        {
-            id:1,
-            alt:'img01',
-            imgSrc:img01,
-        },
-        {
-            id:2,
-            alt:'img02',
-            imgSrc:img02,
-        },
-        {
-            id:3,
-            alt:'img03',
-            imgSrc:img03,
-        },
-        {
-            id:4,
-            alt:'img04',
-            imgSrc:img04,
-        },
-        {
-            id:5,
-            alt:'img05',
-            imgSrc:img05,
-        },
-       
-    ]
+    useEffect(() => {
+        const color = getComputedStyle(document.documentElement).getPropertyValue('--logo-color');
+        console.log("Color:",color);
+        const numColumns = getComputedStyle(document.documentElement).getPropertyValue('--numColumns');        // console.log("hi");
+        console.log("Columns: ", numColumns);
+      }, []);
+    
+      function handleOSizeChange(event) {
+        console.log(event.target.value);
+        document.documentElement.style.setProperty('--numColumns', `${event.target.value}`)
+        const colPercent = 100/event.target.value;
+        document.documentElement.style.setProperty('--colPercent', `${colPercent}%`)
+        // console.log('comeone')
+      }
+      function setColor(newColor) {
+        document.documentElement.style.setProperty('--logo-color', newColor);
+    }
+    
     const DisplayData=JsonData.map(
         (info)=>{
             return(
@@ -67,22 +62,29 @@ const Gallery = ({scrollPosition}) => {
     }
     return (
         <>
+        {/* <h2 style={{textAlign:'center'}}> Number of Columns</h2> */}
+        <Grid container justifyContent="flex-end">
+            {/* <Button variant="contained" onClick={() => setColor('orange')}>Contained</Button> */}
+            <h3>Number of Columns: </h3>
+        <div className='sliderDiv' >
+            <Slider defaultValue={5} aria-label="Default" 
+                steps={1} min={3} max={8} valueLabelDisplay="auto" 
+                onChange={handleOSizeChange}
+            />
+        </div>
+        </Grid>
+        {/* <Box sx={{  justifyContent:"flex-end" }}>
+            <Button variant="contained" onClick={() => setColor('orange')}>Contained2</Button>
+            <Button variant="contained" onClick={() => setColor('orange')}>Contained3</Button>
+        </Box> */}
         <div className={model? "model open" : "model"}>
             <img src={tempImgSrc} alt={tempImgSrc} />
             <CloseIcon onClick={()=>setModel(false)}/>
         </div>
-        <div className='gallery'>
-            {data.map((item,index)=> {
-                return (
-                    <div className ="pics" key={index} onClick={()=>getImg(item.imgSrc)}>
-                        <img src={item.imgSrc} alt={item.alt} style={{width:'100%'}} /> 
-                    </div>
-                )
-            })}
-        </div>
+        
         <div className='gallery'>
             {JsonData.map((each,index)=> {
-                console.log(each.src);
+                // console.log(each.src);
                 return (
                     <div className ="pics" key={index} onClick={()=>getImg(each.src)}>
                         {/* <img src={each.src} style={{width:'100%'}} />  */}

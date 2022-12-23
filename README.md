@@ -24,8 +24,8 @@ Started following this [YouTube Tutorial](https://www.youtube.com/watch?v=cDwa_J
 
 ## TODO
 
-- [ ] css variables for columns in javascript
-- [ ] make json more detailed, description / prompts / etc
+- [ ] make json more detailed, description etc
+- [x] 2022-12-24 column count added
 - [x] 2022-12-23 - lazy loading
 - [x] 2022-12-23 - python script to generate json file with image urls from a directory
 
