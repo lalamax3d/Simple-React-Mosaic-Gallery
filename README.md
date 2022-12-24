@@ -21,6 +21,9 @@ Started following this [YouTube Tutorial](https://www.youtube.com/watch?v=cDwa_J
 - npm start
 - npm install @mui/icons-material
 - result is slightly different, top model behaviour
+- npm install react-router-dom --save
+- npm install react-html5video --save
+
 
 ## TODO
 

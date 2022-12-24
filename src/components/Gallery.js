@@ -6,11 +6,7 @@ import './gallery.css';
 
 import CloseIcon from '@mui/icons-material/Close';
 
-import img01 from './img/img_01.png';
-import img02 from './img/img_02.png';
-import img03 from './img/img_03.png';
-import img04 from './img/img_04.png';
-import img05 from './img/img_05.png';
+
 
 // import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -18,11 +14,13 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component';
 
 import Slider from '@mui/material/Slider';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
+// import Box from '@mui/material/Box';
 
-import JsonData from './images.json'
+import JsonData from '../serviceImageGallery.json'
+
+
 const Gallery = ({scrollPosition}) => {
     useEffect(() => {
         const color = getComputedStyle(document.documentElement).getPropertyValue('--logo-color');

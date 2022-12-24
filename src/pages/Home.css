@@ -1,0 +1,35 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+}
+
+.container {
+    width:100%;
+    height: 100vh;
+}
+
+video {
+    width: 100%;
+    /* if containing then height should be 0 else cover */
+    object-fit: contain;
+    /* height: 100%; */
+    /* object-fit: cover; */
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    top: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; */
+}
