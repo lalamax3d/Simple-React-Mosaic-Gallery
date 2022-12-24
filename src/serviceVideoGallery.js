@@ -2,32 +2,32 @@
 function getVideos() {
     return [
     { 
-        "poster": "slide1.jpg", 
-        "src": "slide1.mp4"
+        "poster": "videos/slide1.jpg", 
+        "src": "videos/slide1.mp4"
     },{ 
-        "poster": "slide2.jpg", 
-        "src": "slide2.mp4"
+        "poster": "videos/slide2.jpg", 
+        "src": "videos/slide2.mp4"
     },{ 
-        "poster": "slide3.jpg", 
-        "src": "slide4.mp4"
+        "poster": "videos/slide3.jpg", 
+        "src": "videos/slide4.mp4"
     },{ 
-        "poster": "s4ide4.jpg", 
-        "src": "slide4.mp4"
+        "poster": "videos/slide4.jpg", 
+        "src": "videos/slide4.mp4"
     },{ 
-        "poster": "s5ide5.jpg", 
-        "src": "slide5.mp4"
+        "poster": "videos/slide5.jpg", 
+        "src": "videos/slide5.mp4"
     },{ 
-        "poster": "s6ide6.jpg", 
-        "src": "slide6.mp4"
+        "poster": "videos/slide6.jpg", 
+        "src": "videos/slide6.mp4"
     },{ 
-        "poster": "slide_btb.jpg", 
-        "src": "slide_btb.mp4"
+        "poster": "videos/slide_btb.jpg", 
+        "src": "videos/slide_btb.mp4"
     },{ 
-        "poster": "slide_da1.jpg", 
-        "src": "slide_da1.mp4"
+        "poster": "videos/slide_da1.jpg", 
+        "src": "videos/slide_da1.mp4"
     },{ 
-        "poster": "slide_da2.jpg", 
-        "src": "slide_da2.mp4"
+        "poster": "videos/slide_da2.jpg", 
+        "src": "videos/slide_da2.mp4"
     }
 ];
 }

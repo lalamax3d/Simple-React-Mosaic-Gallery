@@ -1,42 +1,62 @@
-import { getSpaceUntilMaxLength } from '@testing-library/user-event/dist/utils';
-import React,{useState} from 'react';
-import {useEffect} from "react";
+import React from 'react';
+import {useEffect,useState, useRef,createRef} from "react";
 
 import './gallery.css';
 
-import CloseIcon from '@mui/icons-material/Close';
-import Slider from '@mui/material/Slider';
+// import CloseIcon from '@mui/icons-material/Close';
+// import Slider from '@mui/material/Slider';
 // import Button from '@mui/material/Button';
-
+import {DefaultPlayer as Video} from 'react-html5video';
+import 'react-html5video/dist/styles.css';
 
 import getVideos from '../serviceVideoGallery.js';
 
 
 const VideoGallery = () => {
-    useEffect(() => {
-        const color = getComputedStyle(document.documentElement).getPropertyValue('--logo-color');
-        console.log("Color:",color);
-        const numColumns = getComputedStyle(document.documentElement).getPropertyValue('--numColumns');        // console.log("hi");
-        console.log("Columns: ", numColumns);
-      }, []);
+  useEffect(() => {
+    console.log("Video Gallery Loaded");
+    }, []);
+    const [model, setModel] = useState(false);
 
     const vidoes = getVideos();
 
-    function handleOSizeChange(event) {
-        console.log(event.target.value);
-        document.documentElement.style.setProperty('--numColumns', `${event.target.value}`)
-        const colPercent = 100/event.target.value;
-        document.documentElement.style.setProperty('--colPercent', `${colPercent}%`)
-        // console.log('comeone')
-    }
-      function setColor(newColor) {
-        document.documentElement.style.setProperty('--logo-color', newColor);
-    }
-
     return (
         <>
-        <div className='vgallery'>
-            
+        <h1 style={{textAlign:'center'}}>Videos Listing</h1>
+        <div className='videoGallery'>
+          {vidoes.map((each,index)=> {
+              // console.log(each.src);
+              // let divRef = useRef(null);
+              let divRef = createRef(null);
+
+              const openModel = () => {
+                divRef.current.classList.remove('video');
+                divRef.current.classList.add('model');
+                setModel(true);
+              }
+              const closeModel = () => {
+                divRef.current.classList.add('video');
+                divRef.current.classList.remove('model');
+                setModel(false);
+              }
+
+              return (
+                <div ref={divRef} className ="video" key={index} >
+                  {/* {model && <button className="model-close-btn" onClick={()=>closeModel()}>X</button> } */}
+                  {/* <div className="videoContainer" onClick={()=>openModel()}> */}
+                  <div className="videoContainer" >
+                    <Video
+                      style={{width:'100%'}}
+                      autoPlay={model}
+                      controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
+                      poster={each.poster}
+                      >
+                      <source src={each.src} type="video/mp4" />
+                    </Video>
+                  </div>
+                </div>
+              )
+          })}
         </div>
 
         
