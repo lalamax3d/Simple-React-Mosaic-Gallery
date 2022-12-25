@@ -24,11 +24,15 @@ Started following this [YouTube Tutorial](https://www.youtube.com/watch?v=cDwa_J
 - npm install react-router-dom --save
 - npm install react-html5video --save
 
-
 ## TODO
 
-- [ ] make json more detailed, description etc
-- [x] 2022-12-24 column count added
+- [ ] caoursel
+- [ ] realtime section(gallereWithTitles/detailed json )
+- [ ] anchor links on page
+- [ ] footer
+- [x] 2022-12-26 - nav links active
+- [x] 2022-12-25 - navbar
+- [x] 2022-12-24 - column count added
 - [x] 2022-12-23 - lazy loading
 - [x] 2022-12-23 - python script to generate json file with image urls from a directory
 

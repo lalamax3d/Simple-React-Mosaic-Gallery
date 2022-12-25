@@ -3,31 +3,66 @@
     padding: 0;
     box-sizing: border-box;
   }
+  body {
+    margin: 0;
+      font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2f3138;
+  }
+ 
+ 
+  a {
+    color: #f82249;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  
+  a:hover, a:active, a:focus {
+    color: #cfadb3;
+    outline: none;
+    text-decoration: none;
+  }
   .App {
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
     width: 100%;
     /* min-height: 100vh; */
   }
   
   .App .navbar {
     width: 100%;
-    min-height: 10vh;
+    min-height: 5vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: #fff;
-    background: rgba(29, 161, 242, 1);
+    color: #f82249;
+    background: rgb(62, 62, 62);
   }
-  
+  .App .navbar .logo {
+    /* background-image: '../assets/logo_ff2_2021.png'; */
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    scale: 0.7;
+  }
   .App .navbar .nav-links {
-    width: 40%;
+    width: 20%;
     display: flex;
     justify-content: space-around;
     list-style: none;
   }
   
   .App .navbar .nav-links>a{
-    color: #fff;
+    color: rgb(184, 180, 180);
     text-decoration: none;
+  }
+    
+  .App .navbar .nav-links>a:hover, a:active a:visited{
+    color: rgb(239, 142, 142);
+    text-decoration: underline
   }
   

@@ -7,7 +7,8 @@ import './Home.css';
 export function Home() {
     return (
         <>
-        <h1 style={{textAlign:'center'}}>Home Page Content</h1>
+        {/* <h1 style={{textAlign:'center'}}>WORK SAMPLES</h1>
+        <h3 style={{textAlign:'center'}}>Tracking | MatchMove | Set Extension | VFX | Compositing</h3> */}
         
         <div className="container">
             <video src={headerVideo1} loop muted />
