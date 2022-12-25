@@ -1,21 +1,38 @@
 import React from 'react';
 import {useEffect,useState, useRef,createRef} from "react";
 
-import './gallery.css';
 
 // import CloseIcon from '@mui/icons-material/Close';
 // import Slider from '@mui/material/Slider';
 // import Button from '@mui/material/Button';
 import {DefaultPlayer as Video} from 'react-html5video';
-import 'react-html5video/dist/styles.css';
+import './gallery.css';
+// import 'react-html5video/dist/styles.css';
+import './videoGalleryPlayer.css'
 
 import getVideos from '../serviceVideoGallery.js';
+import { FormControlUnstyledContext } from '@mui/base';
 
 
 const VideoGallery = () => {
   useEffect(() => {
     console.log("Video Gallery Loaded");
     }, []);
+
+    function videoDivClicked(event) {
+      console.log(event.parentElement.parentElement.parentElement);
+      // console.log(event.parentElement.parentElement.parentElement.className);
+      // console.log(event.parentElement.parentElement.parentElement.innerHTML);
+      console.log(event.parentElement.parentElement.parentElement['Video']);
+      let element = event.parentElement.parentElement.parentElement;
+      console.log(element.className)
+      // let ve = element.getChildElementByTagName('Video');
+      // let ve = element.getChildElementByTagName('Video');
+      // console.log(ve);
+      // console.log(event.parentElement.parentElement.parentElement.source);
+      
+    }
+
     const [model, setModel] = useState(false);
 
     const vidoes = getVideos();
@@ -44,11 +61,11 @@ const VideoGallery = () => {
                 <div ref={divRef} className ="video" key={index} >
                   {/* {model && <button className="model-close-btn" onClick={()=>closeModel()}>X</button> } */}
                   {/* <div className="videoContainer" onClick={()=>openModel()}> */}
-                  <div className="videoContainer" >
+                  <div className="videoContainer" onClick={e => videoDivClicked(e.target)}>
                     <Video
                       style={{width:'100%'}}
                       autoPlay={model}
-                      controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
+                      controls={['PlayPause', 'Seek', 'Time', ]}
                       poster={each.poster}
                       >
                       <source src={each.src} type="video/mp4" />
