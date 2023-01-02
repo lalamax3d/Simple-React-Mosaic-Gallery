@@ -18,7 +18,10 @@ import Slider from '@mui/material/Slider';
 import Grid from '@mui/material/Grid';
 // import Box from '@mui/material/Box';
 
-import JsonData from '../serviceImageGallery.json'
+import GalleryCharacter from '../serviceImage_character.json';
+import GalleryMoodboard from '../serviceImage_moodboard.json';
+import GalleryToons from '../serviceImage_toons.json';
+import GalleryFantasy from '../serviceImage_fantasy.json';
 
 
 const Gallery = ({scrollPosition}) => {
@@ -40,7 +43,7 @@ const Gallery = ({scrollPosition}) => {
         document.documentElement.style.setProperty('--logo-color', newColor);
     }
     
-    const DisplayData=JsonData.map(
+    const DisplayData=GalleryCharacter.map(
         (info)=>{
             return(
                 <tr>
@@ -81,7 +84,67 @@ const Gallery = ({scrollPosition}) => {
         </div>
         
         <div className='gallery'>
-            {JsonData.map((each,index)=> {
+            {GalleryCharacter.map((each,index)=> {
+                // console.log(each.src);
+                return (
+                    <div className ="pics" key={index} onClick={()=>getImg(each.src)}>
+                        {/* <img src={each.src} style={{width:'100%'}} />  */}
+                        <LazyLoadImage
+                            // alt={image.alt}
+                            // height={image.height}
+                            effect="blur"
+                            alt={each.alt}
+                            src={each.src} // use normal <img> attributes as props
+                            height={each.height}
+                            scrollPosition={scrollPosition}
+                            width={each.width}
+                            style={{width:'100%'}} />
+                    </div>
+                )
+            })}
+        </div>
+        <div className='gallery'>
+            {GalleryMoodboard.map((each,index)=> {
+                // console.log(each.src);
+                return (
+                    <div className ="pics" key={index} onClick={()=>getImg(each.src)}>
+                        {/* <img src={each.src} style={{width:'100%'}} />  */}
+                        <LazyLoadImage
+                            // alt={image.alt}
+                            // height={image.height}
+                            effect="blur"
+                            alt={each.alt}
+                            src={each.src} // use normal <img> attributes as props
+                            height={each.height}
+                            scrollPosition={scrollPosition}
+                            width={each.width}
+                            style={{width:'100%'}} />
+                    </div>
+                )
+            })}
+        </div>
+        <div className='gallery'>
+            {GalleryToons.map((each,index)=> {
+                // console.log(each.src);
+                return (
+                    <div className ="pics" key={index} onClick={()=>getImg(each.src)}>
+                        {/* <img src={each.src} style={{width:'100%'}} />  */}
+                        <LazyLoadImage
+                            // alt={image.alt}
+                            // height={image.height}
+                            effect="blur"
+                            alt={each.alt}
+                            src={each.src} // use normal <img> attributes as props
+                            height={each.height}
+                            scrollPosition={scrollPosition}
+                            width={each.width}
+                            style={{width:'100%'}} />
+                    </div>
+                )
+            })}
+        </div>
+        <div className='gallery'>
+            {GalleryFantasy.map((each,index)=> {
                 // console.log(each.src);
                 return (
                     <div className ="pics" key={index} onClick={()=>getImg(each.src)}>
