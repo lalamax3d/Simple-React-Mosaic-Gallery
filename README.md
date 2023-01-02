@@ -9,7 +9,6 @@ Started following this [YouTube Tutorial](https://www.youtube.com/watch?v=cDwa_J
 
 - lazy loading using [react-lazy-load-image-component](https://www.npmjs.com/package/react-lazy-load-image-component)
 - simple python script to generate json file with image urls from a folder(quick and dirty / minimalist approach)
-- 
 
 ## How Project was Created
 
@@ -23,6 +22,7 @@ Started following this [YouTube Tutorial](https://www.youtube.com/watch?v=cDwa_J
 - result is slightly different, top model behaviour
 - npm install react-router-dom --save
 - npm install react-html5video --save
+- npm i react-scroll --save
 
 ## TODO
 

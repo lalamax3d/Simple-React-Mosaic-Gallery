@@ -20,6 +20,7 @@
     display: -ms-flexbox;
     display: flex;
     background-color: rgba(0,0,0,0.7);
+    /* lala, opacity default bottom bar */
     opacity: 0;
     transition: opacity 0.2s;
 }
@@ -283,7 +284,7 @@
     cursor: pointer;
     background-color: rgba(0,0,0,0);
 }
-
+/* lala button control hidden */
 .rh5v-Overlay_inner {
     display: inline-block;
     /* display: inline-block; */

@@ -14,7 +14,7 @@ import getVideos from '../serviceVideoGallery.js';
 import { FormControlUnstyledContext } from '@mui/base';
 
 
-const VideoGallery = () => {
+const VideoGallery = (props) => {
   useEffect(() => {
     console.log("Video Gallery Loaded");
     }, []);
@@ -36,7 +36,7 @@ const VideoGallery = () => {
     const [model, setModel] = useState(false);
 
     const vidoes = getVideos();
-
+    console.log(props);
     return (
         <>
         <h1 style={{textAlign:'center'}}>WORK SAMPLES</h1>

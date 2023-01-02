@@ -77,11 +77,11 @@ h1, h2 {
     display: flex;
     justify-content: center;
     align-items:center;
-    background-color:#000000;
-    transition: opacity 0.4s ease, visibility .4s ease, transform .5s ease-in-out ;
+    background-color:rgba(0,0,0,0.8);
+    transition: opacity 0.4s ease, visibility .4s ease, transform .4s ease-in-out ;
     visibility: hidden;
     opacity: 0;
-    transform:scale(0);
+    transform:scale(0.8);
     overflow: hidden;
     z-index:999;
 }
@@ -131,7 +131,7 @@ h1, h2 {
     -webkit-transition: all 350ms ease;
     transition: all 350ms ease;
     cursor: pointer;
-    margin-bottom: 4px;
+    /* margin-bottom: 4px; */
     margin-right: -4px;
     margin-left: -4px;
 }

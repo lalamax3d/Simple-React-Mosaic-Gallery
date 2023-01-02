@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import Concepts from './pages/Concepts';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
+import StickyFooter from './components/Footer';
 
 
 
@@ -38,6 +39,7 @@ function App() {
       </div>
     <Routes>
           <Route path="/" element={<Home/>} />
+          <Route path="/footer" component={<StickyFooter/>} />
           <Route path="/concepts" element={<Concepts/>} />
           <Route path="/about" element={<About/>} />
     </Routes>

@@ -1,6 +1,9 @@
 import React from "react";
 import "./styles.css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 import MyLogo from '../img/logo_ff2_2021.png';
 export default function Nav(){
 
@@ -13,6 +16,7 @@ export default function Nav(){
           </div>
            <ul className="nav-links">
               <NavLink style={({isActive}) => {return isActive ? {color: 'red'} : {}}} to="/">Home</NavLink>
+              <Link  style={({isActive}) => {return isActive ? {color: 'red'} : {}}} to="test2" spy={true} smooth={true} duration={500}>Footer</Link>
               <NavLink style={({isActive}) => {return isActive ? {color: 'red'} : {}}} to="/concepts">Concepts</NavLink>
               <NavLink style={({isActive}) => {return isActive ? {color: 'red'} : {}}} to="/about">About</NavLink>
            </ul>
