@@ -1,14 +1,19 @@
-# React Gallery App
+# React Portfolio Minimalist Website
 
 ## Description
 
 <img src="./src/img/img0.jpg" alt="drawing" width="300" align="right"/>
-Most simple mosaic gallery app with React and Material UI one can possibly imagine.
+
+It started as most simple mosaic gallery app with React and Material UI one can possibly imagine.
 
 Started following this [YouTube Tutorial](https://www.youtube.com/watch?v=cDwa_JwuC-w) and then added some of my own features.
 
 - lazy loading using [react-lazy-load-image-component](https://www.npmjs.com/package/react-lazy-load-image-component)
 - simple python script to generate json file with image urls from a folder(quick and dirty / minimalist approach)
+- then added video gallery (as main page) using [react-html5video](https://www.npmjs.com/package/react-html5video)
+- later on filteration for video and image gallery
+
+Now can be used as a template for a minimalist portfolio website. I will be using it as a template for my own portfolio [website](https://filmfactory.tv).
 
 ## How Project was Created
 
@@ -26,10 +31,9 @@ Started following this [YouTube Tutorial](https://www.youtube.com/watch?v=cDwa_J
 
 ## TODO
 
-- [ ] caoursel
-- [ ] realtime section(gallereWithTitles/detailed json )
-- [ ] anchor links on page
-- [ ] footer
+- [ ] footer (wip)
+- [ ] caoursel (wip)
+- [x] 2023-01-19 - filteration for video and image gallery
 - [x] 2022-12-26 - nav links active
 - [x] 2022-12-25 - navbar
 - [x] 2022-12-24 - column count added
