@@ -18,20 +18,11 @@ export function Home() {
     // const videos = getVideos();
     return (
         <>
-        {/* <h1 style={{textAlign:'center'}}>WORK SAMPLES</h1>
-        <h3 style={{textAlign:'center'}}>Tracking | MatchMove | Set Extension | VFX | Compositing</h3> */}
-        
-        {/* <div className="container"> */}
-            {/* <video src={headerVideo1} loop muted /> */}
-            {/* <video src={headerVideo1} autoPlay loop muted /> */}
-            {/* <p>some temp test</p> */}
-        {/* </div> */}
         <MyCarousel />
         <VideoGallery name="main" />
-        <Element name="RT" className="element">
-
+        {/* <Element name="RT" className="element">
         <VideoGallery2 name="RT" />
-        </Element>
+        </Element> */}
         <StickyFooter />
         </>
     );

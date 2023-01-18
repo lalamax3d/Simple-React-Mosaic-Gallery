@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  /* position:fixed; */
+  position: sticky;
+  /* toposition:fixed;
+  overflow: hidden;
+  top:200px;p:100px; */
+  /* overflow: hidden; */
 }
 
 .App-logo {

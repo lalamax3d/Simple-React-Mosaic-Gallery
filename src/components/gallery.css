@@ -118,12 +118,12 @@ h1, h2 {
 }
 
 .videoGallery {
-    -webkit-colume-count:1;
-    -moz-colume-count:1;
-    column-count:1;
-    -webkit-column-width:100%;
-    -moz-column-width: 100%;
-    -column-width:100%;
+    -webkit-colume-count:var(--vidColumns, 1);
+    -moz-colume-count:var(--vidColumns, 1);
+    column-count:var(--vidColumns, 1);
+    -webkit-column-width:var(--vidPercent, 100%);
+    -moz-column-width: var(--vidPercent, 100%);
+    -column-width:var(--vidPercent, 100%);
     /* padding: 0.8rem; */
 }
 

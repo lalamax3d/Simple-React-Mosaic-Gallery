@@ -24,6 +24,7 @@
     outline: none;
     text-decoration: none;
   }
+
   .App {
     /* font-family: sans-serif; */
     font-family: "Raleway", sans-serif;
@@ -33,6 +34,8 @@
   }
   
   .App .navbar {
+    /* position:sticky; */
+    /* top: 100; */
     width: 100%;
     min-height: 5vh;
     display: flex;
@@ -42,6 +45,12 @@
     color: #f82249;
     background: rgb(62, 62, 62);
   }
+.scrolled{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: lightblue;
+}
   .App .navbar .logo {
     /* background-image: '../assets/logo_ff2_2021.png'; */
     width: 20%;
@@ -55,6 +64,7 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
+    margin-right: 100px;
   }
   
   .App .navbar .nav-links>a{
@@ -62,9 +72,9 @@
     text-decoration: none;
   }
     
-  .App .navbar .nav-links>a:hover, a:active a:visited{
-    color: rgb(239, 142, 142);
+  .App .navbar .nav-links a:hover, a:active a:visited{
+    color: rgb(142, 239, 200);
     text-decoration: underline;
-    /* cursor:hand; */
+    cursor:pointer;
   }
   

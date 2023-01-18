@@ -3,6 +3,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { Grid } from '@mui/material';
+import Item from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import {  DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
@@ -25,11 +27,10 @@ export default function StickyFooter() {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '50vh',
-      }}
-    >
-      <CssBaseline />
-      <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
+        minHeight: '20vh',
+      }}>
+      {/* <CssBaseline /> */}
+      {/* <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
         <Typography variant="h2" component="h1" gutterBottom>
           Sticky footer
         </Typography>
@@ -40,7 +41,21 @@ export default function StickyFooter() {
         </Typography>
         </Element>
         <Typography variant="body1">Sticky footer placeholder.</Typography>
-      </Container>
+      </Container> */}
+      <Grid container spacing={2}>
+        <Grid item xs={8}>
+          <Item>xs=8</Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Item>xs=4</Item>
+        </Grid>
+        <Grid item xs={4}>
+          <Item>xs=4</Item>
+        </Grid>
+        <Grid item xs={8}>
+          <Item>xs=8</Item>
+        </Grid>
+      </Grid>
       <Box
         component="footer"
         sx={{

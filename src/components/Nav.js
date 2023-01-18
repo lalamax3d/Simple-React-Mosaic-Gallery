@@ -16,7 +16,7 @@ export default function Nav(){
           </div>
            <ul className="nav-links">
               <NavLink style={({isActive}) => {return isActive ? {color: 'red'} : {}}} to="/">Home</NavLink>
-              <Link  style={({isActive}) => {return isActive ? {color: 'red'} : {}}} to="RT" spy={true} smooth={true} duration={500}>RealTime</Link>
+              {/* <Link  style={({isActive}) => {return isActive ? {color: 'red'} : {}}} to="RT" spy={true} smooth={true} duration={500}>RealTime</Link> */}
               <NavLink style={({isActive}) => {return isActive ? {color: 'red'} : {}}} to="/concepts">Concepts</NavLink>
               <NavLink style={({isActive}) => {return isActive ? {color: 'red'} : {}}} to="/about">About</NavLink>
            </ul>
